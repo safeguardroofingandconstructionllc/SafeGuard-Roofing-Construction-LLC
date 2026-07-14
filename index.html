@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeGuard Roofing & Construction LLC | Premium General Contractor Flushing, NY</title>
+    <!-- Google Fonts for Luxury Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- DESIGN SYSTEM & CSS VARIABLES --- */
+        :root {
+            --primary-gold: #D4AF37; /* Warm metallic luxury gold */
+            --gold-hover: #F3E5AB;
+            --bg-dark: #0A0A0A; /* Deep premium black */
+            --bg-card: #141414; /* Off-black for elevated cards */
+            --text-light: #F5F5F5;
+            --text-muted: #A0A0A0;
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* --- RESET & BASE STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, .brand-name {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+        }
+
+        span.gold-text {
+            color: var(--primary-gold);
+        }
+
+        /* --- CONTAINERS & BUTTONS --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .btn-luxury {
+            display: inline-block;
+            background: linear-gradient(135deg, #B8860B 0%, var(--primary-gold) 50%, #B8860B 100%);
+            color: #000;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 0; /* Sharp, high-end look */
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-luxury:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(135deg, var(--primary-gold) 0%, #FFF 100%);
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-light);
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 55px;
+            width: auto;
+            border-radius: 50%;
+            border: 1px solid var(--primary-gold);
+            padding: 2px;
+            background: #fff;
+        }
+
+        .brand-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .brand-subtitle {
+            font-size: 0.65rem;
+            color: var(--primary-gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        nav ul a {
+            color: var(--text-light);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            transition: var(--transition-smooth);
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        nav ul a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-gold);
+            transition: var(--transition-smooth);
+        }
+
+        nav ul a:hover {
+            color: var(--primary-gold);
+        }
+
+        nav ul a:hover::after {
+            width: 100%;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(10,10,10,1)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            padding-top: 100px;
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero-image-box {
+            position: relative;
+            border: 2px solid var(--primary-gold);
+            padding: 15px;
+            background: rgba(20,20,20,0.5);
+        }
+
+        .hero-image-box img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(15%) brightness(95%);
+        }
+
+        /* --- ABOUT US --- */
+        .about {
+            padding: 10rem 0;
+            background-color: #0f0f0f;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.05);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .about-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background-color: var(--primary-gold);
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .about-highlight-box {
+            border-left: 3px solid var(--primary-gold);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .about-highlight-box h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        /* --- SERVICES SECTION --- */
+        .services {
+            padding: 10rem 0;
+            background-color: var(--bg-dark);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition-smooth);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        .service-img-wrapper {
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover .service-img-wrapper img {
+            transform: scale(1.08);
+        }
+
+        .service-info {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .service-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .service-link {
+            color: var(--primary-gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition-smooth);
+        }
+
+        .service-link:hover {
+            color: #fff;
+            gap: 12px;
+        }
+
+        .services-cta-outer {
+            text-align: center;
+        }
+
+        /* --- TESTIMONIALS (REVIEWS) --- */
+        .reviews {
+            padding: 10rem 0;
+            background-color: #0f0f0f;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background-color: var(--bg-dark);
+            padding: 3rem 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            position: relative;
+        }
+
+        .review-card::before {
+            content: '“';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(212,175,55,0.1);
+            font-family: serif;
+        }
+
+        .stars {
+            color: var(--primary-gold);
+            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .reviewer-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .reviewer-info span {
+            font-size: 0.8rem;
+            color: var(--primary-gold);
+        }
+
+        /* --- FAQS ACCORDION --- */
+        .faqs {
+            padding: 10rem 0;
+            background-color: var(--bg-dark);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 0.5rem 0;
+        }
+
+        .faq-question h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .faq-icon {
+            font-size: 1.1rem;
+            color: var(--primary-gold);
+            transition: var(--transition-smooth);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-answer p {
+            padding: 1rem 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Active state for dynamic toggle */
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #050505;
+            padding: 5rem 0 2rem 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 1.5rem 0;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-socials a {
+            color: var(--text-light);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-socials a:hover {
+            color: #000;
+            background-color: var(--primary-gold);
+            border-color: var(--primary-gold);
+        }
+
+        .footer-links h4, .footer-contact h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--primary-gold);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links ul a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            font-size: 0.9rem;
+        }
+
+        .footer-links ul a:hover {
+            color: var(--primary-gold);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-contact i {
+            color: var(--primary-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        @media (max-width: 991px) {
+            .hero-grid, .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            nav {
+                position: absolute;
+                top: 90px;
+                left: -100%;
+                width: 100%;
+                background-color: var(--bg-dark);
+                border-bottom: 2px solid var(--primary-gold);
+                transition: var(--transition-smooth);
+            }
+            nav.open {
+                left: 0;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 3rem 0;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- --- HEADER SECTION --- -->
+    <header id="header">
+        <div class="container nav-wrapper">
+                <div>
+                    <span class="brand-name">SafeGuard</span>
+                    <span class="brand-subtitle">Roofing &amp; Construction LLC</span>
+                </div>
+            </a>
+            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#" onclick="closeMobileMenu()">Home</a></li>
+                    <li><a href="#aboutus" onclick="closeMobileMenu()">About Us</a></li>
+                    <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
+                    <li><a href="#contact" onclick="closeMobileMenu()">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- --- HERO SECTION --- -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Building Stronger Homes With <span class="gold-text">Trusted Roofing & Construction</span></h1>
+                <p>SafeGuard Roofing & Construction LLC provides reliable roofing and construction solutions with quality workmanship, durable materials, and professional service</p>
+                <a href="https://safeguardroofingandconstructionllc.com/" class="btn-luxury">Explore Website</a>
+            </div>
+            <div class="hero-image-box">
+                <!-- Using high-quality contextual modern home image -->
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Elite Modern Residence Architectural Roofing">
+            </div>
+        </div>
+    </section>
+
+    <!-- --- ABOUT US SECTION --- -->
+    <section class="about" id="aboutus">
+        <div class="container about-grid">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Exquisite Exterior Engineering Design Work">
+            </div>
+            <div class="about-text">
+                <h2>Our <span class="gold-text">Legacy</span> &amp; Promise</h2>
+                <p>SafeGuard Roofing & Construction LLC is your trusted choice for professional general contractor services in Tpke Flushing, NY. We deliver highly reliable, tailor-made home improvement solutions that significantly elevate the safety, visual aesthetics, and resale value of your property.</p>
+                <p>Our experienced team remains profoundly committed to uncompromised craftsmanship, dependable service, and structurally lasting results for every premier residential and commercial project we undertake.</p>
+                <div class="about-highlight-box">
+                    <h4>To explore our complete history and corporate philosophy:</h4>
+                    <p>Visit our dedicated platform to view full certifications and past client portfolios.</p>
+                    <a href="https://safeguardroofingandconstructionllc.com/#aboutus" target="_blank" class="service-link">View Main Portal About Section <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- SERVICES SECTION --- -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="gold-text">Premium Services</span></h2>
+                <p>We specialize in complete exterior masterpieces utilizing high-performance, industry-leading materials.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img src="https://avatars.mds.yandex.net/get-altay/2799320/2a00000174c541c8ae403388225b05641985/orig" alt="Professional Slate and Architectural Shingle Roofing Project" onerror="this.src='https://images.unsplash.com/photo-1632759162444-183057aa70ec?auto=format&fit=crop&w=600&q=80'">
+                    </div>
+                    <div class="service-info">
+                        <h3>Roofing Services</h3>
+                        <p>Our structural designs combine stormproof resilience with architectural grandeur, engineered using top-tier grade shingles and slate.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img src="https://i.pinimg.com/originals/b2/7c/39/b27c392618600a18282eef39118baf6d.jpg" alt="Luxury Custom Copper Gutter Systems" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80'">
+                    </div>
+                    <div class="service-info">
+                        <h3>Gutters Services</h3>
+                        <p>Architectural gutter solutions that direct rainwater away from your foundation flawlessly while seamlessly complementing your roofline.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img src="https://descco.com/wp-content/uploads/2023/06/unnamed.jpg" alt="Commercial and Residential General Contractor Execution" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80'">
+                    </div>
+                    <div class="service-info">
+                        <h3>General Contractor</h3>
+                        <p>Complete luxury exterior remodeling, masonry, siding, and master-level property expansions executed cleanly from blueprint to completion.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-cta-outer">
+                <a href="https://safeguardroofingandconstructionllc.com/#services" target="_blank" class="btn-luxury">Explore All Services <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- CLIENT REVIEWS --- -->
+    <section class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="gold-text">Reputation</span></h2>
+                <p>The standard of excellence is reflected in the words of those we serve.</p>
+            </div>
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"SafeGuard did an absolute masterclass job replacing our historical shingle roof. Their attention to detail was exceptional and they left the site cleaner than they found it."</p>
+                    <div class="reviewer-info">
+                        <h4>James Harrison</h4>
+                        <span>Flushing, NY Resident</span>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"The gutter system they built is brilliant. Beautiful craftsmanship that fits beautifully onto our existing luxury molding. Highly recommend their skilled team!"</p>
+                    <div class="reviewer-info">
+                        <h4>Seraphina Vance</h4>
+                        <span>Estate Owner</span>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Highly professional general contractors. From original design concept and licensing to the actual buildout, they kept us fully updated and stuck right to schedule."</p>
+                    <div class="reviewer-info">
+                        <h4>Marcus Thornhill</h4>
+                        <span>Commercial Property Manager</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- FAQS SECTION --- -->
+    <section class="faqs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Knowledge <span class="gold-text">Hub</span></h2>
+                <p>Answering our clients' most common general contracting inquiries.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What types of roofing systems do you install?</h3>
+                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We install all premium formats including asphalt architectural shingles, high-grade slate tile, metal seam roofs, and luxury modern flat roof membranes designed specifically for the local NY climate.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Are you fully insured and licensed as contractors in Flushing, NY?</h3>
+                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, absolutely. SafeGuard Roofing & Construction LLC is a fully licensed and comprehensive liability insured general contractor operating directly within New York State rules and municipal guidelines.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How long does a typical full roof replacement take?</h3>
+                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most residential custom roofing replacements are meticulously finalized within 1 to 3 business days, heavily depending on the structural scope, height, and chosen finishing design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- FOOTER SECTION --- -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                    <div>
+                        <span class="brand-name">SafeGuard</span>
+                        <span class="brand-subtitle">Roofing &amp; Construction LLC</span>
+                    </div>
+                </a>
+                <p>SafeGuard Roofing & Construction LLC delivers trusted roofing and construction solutions with quality workmanship, reliable service, and lasting results.</p>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Tpke Flushing, NY</p>
+                <p><i class="fa-solid fa-phone"></i> (718) 496-7331</p>
+                <p><i class="fa-solid fa-envelope"></i> safeguardroofingconstruction@gmail.com</p>
+                <p><i class="fa-solid fa-clock"></i> Mon - Sat: 7:00 AM - 8:30 PM</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 The Ranking Geeks. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- --- SCRIPTS FOR PREMIUM WEB INTERACTIVE EFFECTS --- -->
+    <script>
+        // Header styling change on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '5px 0';
+                header.style.backgroundColor = '#050505';
+            } else {
+                header.style.padding = '0';
+                header.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
+            }
+        });
+
+        // Mobile Menu Logic
+        const navbar = document.getElementById('navbar');
+        const menuIcon = document.getElementById('menu-icon');
+
+        function toggleMobileMenu() {
+            navbar.classList.toggle('open');
+            if (navbar.classList.contains('open')) {
+                menuIcon.className = 'fa-solid fa-xmark';
+            } else {
+                menuIcon.className = 'fa-solid fa-bars';
+            }
+        }
+
+        function closeMobileMenu() {
+            navbar.classList.remove('open');
+            menuIcon.className = 'fa-solid fa-bars';
+        }
+
+        // Accordion FAQ Logic
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close other open ones
+            document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+            
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
