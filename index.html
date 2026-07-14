@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><meta name="google-site-verification" content="9O9xH52XbYiyXGwe1W_nOfNlPaPOVLBelau5pgFymCc" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeGuard Roofing & Construction LLC | Premium General Contractor Flushing, NY</title>
@@ -101,23 +101,13 @@
 
         .logo-container {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             text-decoration: none;
             color: var(--text-light);
-            gap: 12px;
-        }
-
-        .logo-img {
-            height: 55px;
-            width: auto;
-            border-radius: 50%;
-            border: 1px solid var(--primary-gold);
-            padding: 2px;
-            background: #fff;
         }
 
         .brand-name {
-            font-size: 1.15rem;
+            font-size: 1.3rem;
             font-weight: 700;
             line-height: 1.2;
         }
@@ -505,6 +495,11 @@
             margin-bottom: 4rem;
         }
 
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+        }
+
         .footer-brand p {
             color: var(--text-muted);
             font-size: 0.9rem;
@@ -627,10 +622,9 @@
     <!-- --- HEADER SECTION --- -->
     <header id="header">
         <div class="container nav-wrapper">
-                <div>
-                    <span class="brand-name">SafeGuard</span>
-                    <span class="brand-subtitle">Roofing &amp; Construction LLC</span>
-                </div>
+            <a href="#" class="logo-container">
+                <span class="brand-name">SafeGuard</span>
+                <span class="brand-subtitle">Roofing &amp; Construction LLC</span>
             </a>
             <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <i class="fa-solid fa-bars" id="menu-icon"></i>
@@ -655,7 +649,6 @@
                 <a href="https://safeguardroofingandconstructionllc.com/" class="btn-luxury">Explore Website</a>
             </div>
             <div class="hero-image-box">
-                <!-- Using high-quality contextual modern home image -->
                 <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Elite Modern Residence Architectural Roofing">
             </div>
         </div>
@@ -828,13 +821,13 @@
     </section>
 
     <!-- --- FOOTER SECTION --- -->
-<footer id="contact">
-    <div class="container footer-grid">
-        <span class="brand-name">SafeGuard</span>
-                        <span class="brand-subtitle">Roofing &amp; Construction LLC</span>
-                    </div>
-                </a>
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <span class="brand-name">SafeGuard</span>
+                <span class="brand-subtitle">Roofing &amp; Construction LLC</span>
                 <p>SafeGuard Roofing & Construction LLC delivers trusted roofing and construction solutions with quality workmanship, reliable service, and lasting results.</p>
+            </div>
             
             <div class="footer-links">
                 <h4>Quick Links</h4>
